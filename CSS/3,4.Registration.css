@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    height:80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-box {
+    background-color: #2e2e2e;
+    padding: 30px;
+    border-radius: 15px;
+    width: 70%;
+    margin:40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 25px rgba(255, 217, 0, 0.842); /* Red glow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 2.5rem;
+    background: linear-gradient(180deg, #f8ec3f, #ffb700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+form {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.input-group input,select {
+    width: 100%;
+    height:3em;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    font-size: 20px;
+}
+
+.input-group input::placeholder {
+    color: #ccc;
+
+}
+
+.submit-btn {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.submit-btn:hover {
+    background-color:#058455;
+}
+
+.illustration {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.illustration img {
+    max-width: 100%;
+    height: auto;
+}
+
+.illustration h1{
+    text-align: center;
+    font-family: Times;
+    font-weight: bold;
+    font-size: 50px;
+    color:#f7f6f3d6;
+    
+}
+
+.illustration h1 span{
+    font-family: Times;
+    background: linear-gradient(180deg, #f8ec3f, #ffb700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 4px 4px 2 rgb(252, 10, 10);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-box,
+    .illustration {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+}

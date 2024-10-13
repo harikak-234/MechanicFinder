@@ -1,0 +1,76 @@
+.container {
+    /* background-color: white; */
+    width: 100%;
+    background-size: cover;
+    height: 55vh; /* Ensure it tries to fill its parent's height */
+    display: flex;
+    border-radius: 10px;
+    gap: 10px;
+    color: gold;
+    flex-direction: row; /* Keeps items horizontally aligned */
+    overflow-x: auto; /* Enables horizontal scrollbar if needed */
+    max-height: 100%; /* Ensures the container height doesn't exceed its parent */
+}
+
+.81items {
+    height: 100vh; /* Set the parent height to the full viewport height */
+    overflow: hidden; /* Prevents overflow on the parent if needed */
+}
+
+
+.service-item {
+    background-color: #111;
+    border: 2px solid gold;
+    border-radius: 10px;
+    padding: 20px 10px 5px;
+    text-align: center;
+    width: 300px;
+    display: block; /* Ensure each item takes its own block level space */
+    font-size: 14px;
+    height:auto;
+    flex-direction: column;
+
+}
+
+#service-item {
+    background-color: #111;
+    border: 2px solid gold;
+    border-radius: 10px;
+    padding: 20px 10px 5px;
+    text-align: center;
+    width: 300px;
+    display: block; /* Ensure each item takes its own block level space */
+    font-size: 14px;
+    height:auto;
+    flex-direction: column;
+    overflow-y: auto;
+
+}
+
+.service-item img {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(248, 236, 63, 0.8)
+}
+
+.service-item ul{
+    list-style: none;
+    color:rgba(255, 157, 0, 0.831);
+}
+
+.BookButton button {
+    background-color: rgb(255, 215, 0);
+    border: none;
+    color: black;
+    font-family: erif;
+    padding: 7px;
+    margin: 10px 0px 10px 0;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+.BookButton button:hover{
+    background-color: rgba(255, 190, 0, 0.831);
+}

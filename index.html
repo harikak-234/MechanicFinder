@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanic Master Login</title>
+    <link rel="stylesheet" href="CSS/1.indexStyle.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="ASSETS/1.logo.png" alt="Logo" class="logo">
+        </div>
+        <h1 class="title">MechanicMaster</h1>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img class="wheel" src="https://i.ibb.co/cvrCt0p/1588433178436.png" alt="Tire" border="0" width="300" height="300"/>
+            <p class="tagline">Say goodbye to endless Google searches for a good mechanic.</p><p> Garage Guru makes finding the perfect mechanic easy and stress-free</p>
+        </div>
+
+        <div class="login-container" id="login-container">
+            <h2>Login</h2>
+            <form id="loginForm" action="PHP/1.connectLogin.php" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="hello">Don't have an account? <a href="#" id="signupLink" onclick="changelogin()">Sign up</a></p>
+        </div>
+
+    </div>
+    <script>
+        function changelogin() {
+            document.getElementById("login-container").innerHTML =`
+            <h2>Sign Up</h2>
+                <p>Please choose an account type:</p>
+                <button id="userSignup">User</button>
+                <button id="mechanicSignup">Mechanic</button>
+                <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
+            `;
+
+            document.getElementById("userSignup").addEventListener("click", function () {
+            window.location.href = "HTML/3.UserRegistration.html"; // Redirect to UserRegistration.html
+        });
+
+        document.getElementById("mechanicSignup").addEventListener("click", function () {
+            window.location.href = "HTML/4.MechanicRegistration.html"; // Redirect to MechanicRegistration.html
+        });
+
+        // Add event listener to "Login" link to go back to the login form
+        document.getElementById("loginLink").addEventListener("click", function () {
+            resetToLogin(); // Call the function to reset to the login form
+        });
+        }
+
+    </script>
+</body>
+</html>

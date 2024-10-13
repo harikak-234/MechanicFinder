@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Batteries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/a83battery.css">
+
+</head>
+
+<body>
+    <div class="container-fluid mt-4">
+        <div class="card-row card-row1">
+            <div class="card card1">
+                <div class="img-container img-container1">
+                    <img class="card-img-top" src="../ASSETS/831BatteryAmaron.jpeg" alt="Amaron Battery">
+                </div>
+                <div class="card-body card-body1">
+                    <h1>Amaron</h1>
+                    <h5>₹ 4,600</h5>
+                    <p>Low maintenance</p>
+                    <p>Corrosion-resistant terminals</p>
+                    <p>Warranty 75 Months</p>
+                    <div class="quantity-controls d-flex justify-content-center mt-2">
+                        <button class="btn btn-dark" onclick="decrement('item831')">-</button>
+                        <input class="form-control mx-2 text-center" type="number" id="item831" value="0" min="0"
+                            max="10" style="width: 50px;">
+                        <button class="btn btn-dark" onclick="increment('item831')">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card1">
+                <div class="img-container img-container1">
+                    <img class="card-img-top" src="../ASSETS/832BatteryExide.jpeg" alt="Amaron Battery">
+                </div>
+                <div class="card-body card-body1">
+                    <h1>Exide</h1>
+                    <h5>₹ 4,399</h5>
+                    <p>Superior power backup</p>
+                    <p>Quick recharge time</p>
+                    <p>Durable build quality</p>
+                    <p>Warranty 55 Months</p>
+                    <div class="quantity-controls d-flex justify-content-center mt-2">
+                        <button class="btn btn-dark" onclick="decrement('item832')">-</button>
+                        <input class="form-control mx-2 text-center" type="number" id="item832" value="0" min="0"
+                            max="10" style="width: 50px;">
+                        <button class="btn btn-dark" onclick="increment('item832')">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card1">
+                <div class="img-container img-container1">
+                    <img class="card-img-top" src="../ASSETS/833BatteryLivgaurd.jpeg" alt="Amaron Battery">
+                </div>
+                <div class="card-body card-body1">
+                    <h1>Livguard</h1>
+                    <h5>₹ 9,658</h5>
+                    <p>Reliable performance</p>
+                    <p>Enhanced safety features</p>
+                    <p>High vibration resistance</p>
+                    <p>Warranty 60 Months</p>
+                    <div class="quantity-controls d-flex justify-content-center mt-2">
+                        <button class="btn btn-dark" onclick="decrement('item833')">-</button>
+                        <input class="form-control mx-2 text-center" type="number" id="item833" value="0" min="0"
+                            max="10" style="width: 50px;">
+                        <button class="btn btn-dark" onclick="increment('item833')">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card1">
+                <div class="img-container img-container1">
+                    <img class="card-img-top" src="../ASSETS/834BatteryAlternator.jpeg" alt="Amaron Battery">
+                </div>
+                <div class="card-body card-body1">
+                    <h1>Alternator</h1>
+                    <h5>₹ 12,349</h5>
+                    <p>Continuous power supply</p>
+                    <p>Charges while driving</p>
+                    <p>Supports multiple accessories</p>
+                    <p>Improves battery Life</p>
+                    <div class="quantity-controls d-flex justify-content-center mt-2">
+                        <button class="btn btn-dark" onclick="decrement('item834')">-</button>
+                        <input class="form-control mx-2 text-center" type="number" id="item834" value="0" min="0"
+                            max="10" style="width: 50px;">
+                        <button class="btn btn-dark" onclick="increment('item834')">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JAVASCRIPT/83battery.js"></script>
+</body>
+
+</html>

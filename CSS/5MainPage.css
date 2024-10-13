@@ -1,0 +1,312 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    color:gold;
+}
+
+body {
+    padding-top: 56px;
+    background: radial-gradient(#6b6560, #000000);
+}
+
+/* Navbar Styling */
+.navbar{
+    background-color: gold;
+}
+.navbar img{
+    height: 50px;
+}
+.navbar-nav .nav-item:hover .nav-link {
+    background-color: rgba(0, 0, 0, 0.751);
+    transition: background-color 0.3s ease;
+    color: gold;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+
+/* Service Banner Section Styling */
+.service-banner {
+    height: 100vh; /* Full screen height */
+    /* background: radial-gradient(#6b6560, #000000); Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.banner-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.banner-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+/* Mechanic Image Styling */
+.mechanic-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mechanic-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Service Info Styling */
+.service-info-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logged-in {
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    font-weight: bold;
+    font-family: cursive;
+    -webkit-text-stroke: 1px gold;
+}
+
+.guest {
+    color: red;
+}
+
+
+.service-info {
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+.bill-section{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.book-heading{
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.phone-icon {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.phone-number p {
+    font-size: 1.5em;
+}
+
+.tagline {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .mechanic-img {
+        height: 50vh;
+        margin-top: 20px;
+    }
+
+    .banner-row {
+        flex-direction: column;
+    }
+
+    .service-info-container {
+        margin-top: 20px;
+    }
+
+    .book-heading {
+        font-size: 2em;
+    }
+
+    .phone-number p {
+        font-size: 1.2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+}
+
+/* Maps Section Styling */
+
+.mapsHeading {
+    font-size: 3em;
+    background: linear-gradient(180deg, #f8ec3f, #ffb700); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make the text fill color transparent */
+    margin-bottom: 20px; /* Space between heading and map */
+    text-align: center;
+}
+
+.map {
+    width: 100%; /* Full width */
+    height: 90%; /* Adjust as needed */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure rounded corners for the iframe */
+    box-shadow: 0 0 15px rgba(248, 236, 63, 0.8), 0 0 10px rgba(255, 183, 0, 0.8); /* Glowing effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Optional: Glow on hover */
+.map:hover {
+    box-shadow: 0 0 20px rgba(248, 236, 63, 1), 0 0 20px rgba(255, 183, 0, 1); /* Increased glow on hover */
+}
+
+
+/* Make iframe take full size of the map container */
+.map iframe {
+    width: 100%; /* Full width of the map container */
+    height: 100%; /* Full height of the map container */
+    border: 0; /* Remove iframe border */
+    border-radius: 15px; /* Ensure iframe also has rounded corners */
+}
+
+/* Mechanics styling */
+.mechanicsHeading{
+    font-size: 3em;
+    background: linear-gradient(180deg, #f8ec3f, #ffb700); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make the text fill color transparent */
+    margin-bottom: 20px; /* Space between heading and map */
+    text-align: center;
+}
+
+/* Kart Styling */
+.empty{
+    height:63px;
+}
+.kartHeading{
+    font-size: 2em;
+    background: linear-gradient(180deg, #f8ec3f, #ffb700); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make the text fill color transparent */
+    margin-bottom: 3px; /* Space between heading and map */
+    text-align: center;
+}
+
+.KartcategoriesList {
+    /* background-color: red; */
+    height: 26vh; /* Adjust as necessary */
+    width: 95%;
+    margin: 10px auto;
+    display: flex;
+    overflow-x: auto;
+    gap: 0px; /* Adds little space between categories */
+    border-radius: 10px;
+    padding: 10px;
+}
+.KartcategoriesList::-webkit-scrollbar {
+    width: 5px;
+    height:10px;
+}
+
+.KartcategoriesList::-webkit-scrollbar-track {
+    background: #7171726c;
+    border-radius: 5px;
+}
+
+.KartcategoriesList::-webkit-scrollbar-thumb {
+    background-color: rgba(244, 239, 174, 0.443)
+}
+
+.KartcategoriesList::-webkit-scrollbar-thumb:hover {
+    background-color:rgba(244, 239, 174, 0.443);
+    border-radius: 30px;
+}
+
+.KartCategory {
+    min-width: 200px; /* Ensures that categories don't shrink too small */
+    flex-shrink: 0; /* Prevents categories from shrinking */
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.KartCategory img {
+    width: 180px;
+    height: 130px;
+    border-radius: 10px;
+    border: 2px solid gold;
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+.KartCategory img:hover{
+    box-shadow: 0 0 10px gold, 0 0 10px gold;
+}
+
+.KartCategory h2{
+    font-size: 1em;
+    font: times;
+    color:gold;
+}
+
+.KartcategoriesItems{
+    height:55vh;
+    padding:5px 20px;
+    margin-bottom: 40px;
+}
+
+#billButton{
+    background-color: gold;
+    color: black;
+    font-size: large;
+    border:1px solid black;
+    transition: box-shadow 0.3s ease;
+}
+
+#billButton:hover{
+    background-color:black;
+    box-shadow: 0 0 5px gold, 0 0 5px gold;
+    color: gold;
+    font-weight: bold;
+}
+
+#billButton:click{
+    background-color:gold;
+}
+
+.tablex{
+    margin:10px auto;
+    color:gold;
+    align-items: center;
+    justify-content: center;
+    border-collapse:collapse;
+}
+
+.thx,.tdx, td, tr, tbody {
+    padding: 0.3em 2em;
+    text-align: center;
+    border: 2px solid gold;
+}
+
+.thx{
+    padding: 1em 0;
+}

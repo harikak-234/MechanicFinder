@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="../CSS/3,4.Registration.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Registration Form</h2>
+            <form id="myForm" action="../PHP/3.connectUserRegistration.php" method="post">
+                <div class="row">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email ID</label>
+                        <input type="email" id="email" placeholder="" name="email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" pattern="[a-z0-9_.]+"
+                            title="Username must only contain lowercase letters, numbers, and underscores."
+                            placeholder="" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="" name="password" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="contact">Contact No.</label>
+                        <input type="text" id="contact" pattern="[0-9]{10}"
+                            title="Contact number must be exactly 10 digits" placeholder="" name="contact" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" onchange="" name="gender">
+                            <option value="">Select your gender</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Nottosay">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="occupation">Occupation</label>
+                        <input type="text" id="occupation" placeholder="" name="occupation">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn" id="sub">Submit</button>
+            </form>
+        </div>
+        <div class="illustration">
+            <img src="../ASSETS/3.UserClipartImage.png" alt="3.UserClipartImage.png">
+            <h1>Hello <span>User!</span></h1>
+        </div>
+    </div>
+</body>
+
+</html>
