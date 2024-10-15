@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mechanic Master Login</title>
     <link rel="stylesheet" href="CSS/1.indexStyle.css">
 </head>
+
 <body>
     <div class="header-container">
         <div class="logo-container">
@@ -15,8 +17,10 @@
     </div>
     <div class="container">
         <div class="image-container">
-            <img class="wheel" src="https://i.ibb.co/cvrCt0p/1588433178436.png" alt="Tire" border="0" width="300" height="300"/>
-            <p class="tagline">Say goodbye to endless Google searches for a good mechanic.</p><p> Garage Guru makes finding the perfect mechanic easy and stress-free</p>
+            <img class="wheel" src="https://i.ibb.co/cvrCt0p/1588433178436.png" alt="Tire" border="0" width="300"
+                height="300" />
+            <p class="tagline">Say goodbye to endless Google searches for a good mechanic.</p>
+            <p> Garage Guru makes finding the perfect mechanic easy and stress-free</p>
         </div>
 
         <div class="login-container" id="login-container">
@@ -34,7 +38,7 @@
     </div>
     <script>
         function changelogin() {
-            document.getElementById("login-container").innerHTML =`
+            document.getElementById("login-container").innerHTML = `
             <h2>Sign Up</h2>
                 <p>Please choose an account type:</p>
                 <button id="userSignup">User</button>
@@ -43,19 +47,20 @@
             `;
 
             document.getElementById("userSignup").addEventListener("click", function () {
-            window.location.href = "HTML/3.UserRegistration.html"; // Redirect to UserRegistration.html
-        });
+                window.location.href = "HTML/3.UserRegistration.html"; // Redirect to UserRegistration.html
+            });
 
-        document.getElementById("mechanicSignup").addEventListener("click", function () {
-            window.location.href = "HTML/4.MechanicRegistration.html"; // Redirect to MechanicRegistration.html
-        });
+            document.getElementById("mechanicSignup").addEventListener("click", function () {
+                window.location.href = "HTML/4.MechanicRegistration.html"; // Redirect to MechanicRegistration.html
+            });
 
-        // Add event listener to "Login" link to go back to the login form
-        document.getElementById("loginLink").addEventListener("click", function () {
-            resetToLogin(); // Call the function to reset to the login form
-        });
+            // Add event listener to "Login" link to go back to the login form
+            document.getElementById("loginLink").addEventListener("click", function () {
+                resetToLogin(); // Call the function to reset to the login form
+            });
         }
 
     </script>
 </body>
+
 </html>

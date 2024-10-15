@@ -33,8 +33,7 @@ body {
 
 /* Service Banner Section Styling */
 .service-banner {
-    height: 100vh; /* Full screen height */
-    /* background: radial-gradient(#6b6560, #000000); Gradient background */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,11 +79,10 @@ body {
 }
 
 .logged-in {
-    color: rgb(0, 0, 0);
+    color: gold;
     font-size: 2em;
     font-weight: bold;
-    font-family: cursive;
-    -webkit-text-stroke: 1px gold;
+    font-family: Serif;
 }
 
 .guest {
@@ -204,6 +202,7 @@ body {
 .empty{
     height:63px;
 }
+
 .kartHeading{
     font-size: 2em;
     background: linear-gradient(180deg, #f8ec3f, #ffb700); /* Gradient background */
@@ -214,8 +213,7 @@ body {
 }
 
 .KartcategoriesList {
-    /* background-color: red; */
-    height: 26vh; /* Adjust as necessary */
+    height: 33vh;
     width: 95%;
     margin: 10px auto;
     display: flex;
@@ -274,7 +272,7 @@ body {
     margin-bottom: 40px;
 }
 
-#billButton{
+#billButton,#fuelBillButton{
     background-color: gold;
     color: black;
     font-size: large;
@@ -282,14 +280,14 @@ body {
     transition: box-shadow 0.3s ease;
 }
 
-#billButton:hover{
+#billButton,#fuelBillButton:hover{
     background-color:black;
     box-shadow: 0 0 5px gold, 0 0 5px gold;
     color: gold;
     font-weight: bold;
 }
 
-#billButton:click{
+#billButton,#fuelBillButton:click{
     background-color:gold;
 }
 
@@ -309,4 +307,210 @@ body {
 
 .thx{
     padding: 1em 0;
+}
+
+.fuelContainer {
+    width: 60%; /* Default width for laptops */
+    margin: 0 auto; /* Center the container */
+    box-shadow: 0 0 15px rgba(248, 236, 63, 0.8), 0 0 10px rgba(255, 183, 0, 0.8);
+    align-items: center;
+    padding:0 100px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.p-2 {
+    display: flex; /* Ensure the parent uses flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between children */
+    gap:10px;
+    padding-left:0px;
+}
+
+@media (max-width: 768px) {
+    .fuelContainer {
+        width: 95%; /* Full width for mobile devices */
+        padding:0 30px;
+    }
+}
+
+.fuel-control::-webkit-outer-spin-button,
+.fuel-control::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.fuelImage img{
+    height:100px;
+    width:150px;
+    border-radius: 8px;
+    border:2px solid gold;
+}
+
+.fuelImage {
+    position: relative;
+}
+
+.fuelPrice {
+    position: absolute;
+    top: 0px; 
+    left: 0px; 
+    background-color: rgb(255, 217, 0); 
+    color: black;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    z-index: 1;
+    font-weight:500;
+}
+.Fuel-controls {
+    height:fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: gold;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.Fuel-controls button {
+    background-color: #1e1d1d;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: gold;
+    transition: background-color 0.2s ease;
+}
+
+.Fuel-controls input[type="number"] {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0 5px; 
+}
+
+.Fuel-controls button:focus,
+.Fuel-controls input[type="number"]:focus {
+    outline: none;
+}
+
+.Fuel-controls button:hover {
+    background-color: #454343; 
+}
+
+
+/* COntact Form Styling */
+#10Contact {
+    margin-top: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(#6b6560,#000000);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin:10px auto;
+    margin-top: 100px;
+}
+
+/* Contact Container */
+.contact-container {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Heading */
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffd700; /* Gold color */
+    font-size: 28px;
+}
+
+/* Labels */
+.contact-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffd700; /* Gold color */
+}
+
+/* Input Fields */
+.contact-container input[type="text"],
+.contact-container input[type="tel"],
+.contact-container textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ffd700; /* Gold border */
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.contact-container input[type="text"]:focus,
+.contact-container input[type="tel"]:focus,
+.contact-container textarea:focus {
+    border-color: #ffa500; /* Orange border on focus */
+    outline: none;
+}
+
+/* Submit Button */
+.contact-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffd700; /* Gold background */
+    border: none;
+    border-radius: 5px;
+    color: #1e1e1e; /* Dark text */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-container button:hover {
+    background-color: #ffa500; /* Orange on hover */
+}
+
+/* Form Message */
+#formMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #ffd700;
+}
+
+/* Hidden Honeypot Field */
+.hidden-field {
+    display: none;
+}
+
+
+
+#11Rating{
+    margin-bottom:50px;
+}
+
+
+#11RatingIframe {
+    border:5px solid black;
+    width: 100%;
+    border: none;
+}
+
+#11Rating {
+    padding: 20px 0;
 }

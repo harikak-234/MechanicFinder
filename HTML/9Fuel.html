@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Station</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(#6b6560, #000000);
+            color:gold; /* Gold */
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            background: radial-gradient(#6b6560, #000000);
+            color: white;
+        }
+        h1 {
+            color: gold;
+        }
+        .fuel-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .fuel-item img {
+            width: 120px;
+            height: 80px;
+        }
+        .controls {
+            display: flex;
+            align-items: center;
+        }
+        .controls button {
+            background-color: #8B4513;
+            color: #FFD700;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .controls input {
+            width: 40px;
+            text-align: center;
+            margin: 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .bill {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .btn-generate {
+            background-color: #8B4513;
+            color: #FFD700;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Fuel Station</h1>
+
+        <!-- Petrol Section -->
+        <div class="fuel-item">
+            <div>
+                <img src="petrol.jpeg" alt="Petrol">
+                <div>Petrol - ₹80/L</div>
+            </div>
+            <div class="controls">
+                <button onclick="decrement('petrol')">-</button>
+                <input type="number" id="petrol" value="0" min="0.5" max="2" step="0.5" readonly>
+                <button onclick="increment('petrol')">+</button>
+            </div>
+        </div>
+
+        <!-- Diesel Section -->
+        <div class="fuel-item">
+            <div>
+                <img src="diesel.jpg" alt="Diesel">
+                <div>Diesel - ₹100/L</div>
+            </div>
+            <div class="controls">
+                <button onclick="decrement('diesel')">-</button>
+                <input type="number" id="diesel" value="0" min="0.5" max="2" step="0.5"readonly>
+                <button onclick="increment('diesel')">+</button>
+            </div>
+        </div>
+
+        <!-- CNG Section -->
+        <div class="fuel-item">
+            <div>
+                <img src="cng.jpeg" alt="CNG" >
+                <div>CNG - ₹120/L</div>
+            </div>
+            <div class="controls">
+                <button onclick="decrement('cng')">-</button>
+                <input type="number" id="cng" value="0" min="0.5" max="2" step="0.5"readonly>
+                <button onclick="increment('cng')">+</button>
+            </div>
+        </div>
+
+        <div class="bill">
+            <p>Total Bill: ₹<span id="total-bill">0.00</span></p>
+            <button class="btn-generate" onclick="generateBill()">Generate Bill</button>
+        </div>
+    </div>
+
+    <script>
+        const prices = {
+            petrol: 80,
+            diesel: 100,
+            cng: 120
+        };
+        function increment(fuel) {
+            const input = document.getElementById(fuel);
+            const currentValue = parseFloat(input.value) || 0;
+            if (currentValue < 2) {
+                input.value = (currentValue + 0.5).toFixed(1);
+            }
+            updateBill();
+        }
+
+        function decrement(fuel) {
+            const input = document.getElementById(fuel);
+            const currentValue = parseFloat(input.value) || 0;
+            if (currentValue > 0.5) {
+                input.value = (currentValue - 0.5).toFixed(1);
+            }
+            updateBill();
+        }
+
+        function updateBill() {
+            const petrol = parseFloat(document.getElementById('petrol').value) * prices.petrol;
+            const diesel = parseFloat(document.getElementById('diesel').value) * prices.diesel;
+            const cng = parseFloat(document.getElementById('cng').value) * prices.cng;
+            const total = petrol + diesel + cng;
+            document.getElementById('total-bill').innerText = total.toFixed(2);
+        }
+
+        function generateBill() {
+            alert('Your total bill is $' + document.getElementById('total-bill').innerText);
+        }
+    </script>
+</body>
+</html>
